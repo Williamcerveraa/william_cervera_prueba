@@ -61,11 +61,10 @@ app.get('/contacts', (req, res) => {
   
     //  a) Si "phrase" está presente pero está vacío, responder con 400 Bad Request
     if (phrase !== undefined && phrase.trim() === '') {
-      return res.status(400).send(); // Cuerpo de la respuesta vacío
+      return res.status(400).send();
     }
   
     //   b) Si "phrase" está presente y no está vacío, filtramos los contactos
-    //      para que coincidan (case-insensitive substring match) con la frase.
     if (phrase !== undefined && phrase.trim() !== '') {
       const phraseLower = phrase.toLowerCase();
       contacts = contacts.filter(contact =>
@@ -73,7 +72,7 @@ app.get('/contacts', (req, res) => {
       );
     }
   
-    // 3. Ordenar los contactos por nombre (ascending)
+    // 3. Ordenar los contactos por nombre
     contacts.sort((a, b) => a.name.localeCompare(b.name));
   
     // 4. Devolver el array resultante (puede estar vacío si no hubo coincidencias)
