@@ -11,3 +11,9 @@ Este proyecto es una API desarrollada con Node.js y Express.js. A continuación,
 - Posterior a la instalación de dependencias ejecutar el comando npm run start para correr la API
 ## Documentación
 La documentación de la API está disponible en http://localhost:3000/api-docs (se utiliza swagger para interfaz visual).
+## Consultas SQL
+- Es necesario primero la creación de una base de datos para posteriormente crear las tablas e insertar datos en ellas para probar las consultas select de slq.
+- En mi caso cree una base de datos con el nombre de la empresa y posteriormente corrí las sentencias sql proporcionadas en el word o el archivo sql.
+- Se hizo uso del gestor SQL Managment Studio de Microsoft.
+## Autor
+- William Manuel Cervera Dorantes
