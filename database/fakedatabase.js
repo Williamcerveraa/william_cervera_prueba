@@ -36,7 +36,6 @@ function getAllContacts() {
 /**
  * Dado un ID de contacto, retorna ese contacto si existe; de lo contrario, `undefined`.
  * @param {number} contactId - El ID del contacto a buscar.
- * @returns {object|undefined} - El objeto contacto si existe, o `undefined` si no.
  */
 function getContactById(contactId) {
   return contactsDb.find(contact => contact.id === contactId);
@@ -54,7 +53,7 @@ function deleteContactById(contactId) {
   return contactsDb.length < originalLength;
 }
 
-// Exportamos las funciones para que se puedan usar en los endpoints.
+
 module.exports = {
   getAllContacts,
   getContactById,
